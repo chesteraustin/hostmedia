@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>So you want to be my friend?</title>
+ 
+	<!-- Include the bootstrap stylesheets -->
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+
+	<!-- Optional: Include the jQuery library -->
+	<script src="jquery.min.js">
+	</script>
+
+	<!-- Optional: Incorporate the Bootstrap Javascript plugins -->
+	<script src="bootstrap.js"></script>
+	<script src="friend.js"></script>
+<!--
+	<script src="tutorial.js"></script>
+-->
+
+	</head>
+ 
+<body>
+
+<div class="container">
+	<h1>Do you want to be my friend?</h1>
+
+	<div id="contact_form">  
+	<form name="contact" action="">  
+	<fieldset>  
+		<label for="name" id="name_label">Name</label>  
+		<input type="text" name="name" id="name" size="30" value="" class="text-input" />  
+		
+		<label for="email" id="email_label">Email</label>  
+		<input type="text" name="email" id="email" size="30" value="" class="text-input" />  
+		
+		<label for="phone" id="phone_label">Phone</label>  
+		<input type="text" name="phone" id="phone" size="30" value="" class="text-input" />  
+		
+		<input type="radio" name="answer" id="answer_yes" value="yes" disabled><label for="answer_yes" id="answer_yes_label">Yes</label>
+		<input type="radio" name="answer" id="answer_no" value="no" checked><label for="answer_no" id="answer_no_label">No</label>
+
+		<br />  
+		<input type="button" name="submit" class="button" id="submit_btn" value="Submit" />  
+	</fieldset>
+	</form>  
+	</div>  
+</div><!--./container-->
+
+</body>
+</html>
