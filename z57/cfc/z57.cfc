@@ -19,18 +19,24 @@
 
 	<!---Convert list to array --->
 	<cfset NUMBERS_ARRAY = listtoarray(numbers)> 
+	<!---Add numbers to oddAppearance --->
+	<cfset oddAppearance = "">
 
 	<!---Take number from array and loop through and see if you can find that number --->
     <cfloop array="#NUMBERS_ARRAY#" index="findMatch">
-		<cfset appears = 0>
+
+		<cfset appears = 0> <!---initial count number appears --->
 		<cfloop array="#NUMBERS_ARRAY#" index="checkMatch">
 			<cfif checkMatch eq findMatch>
 				<cfset appears = appears + 1>
 			</cfif>
 		</cfloop>
-			<cfif appears eq 1>
-				<cfset oddAppearance = findMatch>
-			<cfbreak>
+			<cfif appears mod 2 eq 1>
+				<cfif oddAppearance eq "">
+					<cfset oddAppearance = findMatch>
+				<cfelse>
+					<cfset oddAppearance = oddAppearance&","&findMatch>
+				</cfif>
 			</cfif>
 	</cfloop>
 
