@@ -1,6 +1,6 @@
 ﻿<cfif client.playerRole eq "question">
 	<!---Get winner ID --->
-	<cfinvoke component="chestera_cah3.cfc.cfc.game" 
+	<cfinvoke component="chestera_cah3.cfc.game" 
 			  method="getWinner"  
 			  returnVariable="getWinner" >
 		<cfinvokeargument name="gameID" value="#CLIENT.GAMEID#" />
@@ -9,7 +9,7 @@
 	</cfinvoke>
 
 	<!---Post Winner --->
-	<cfinvoke component="chestera_cah3.cfc.cfc.game" 
+	<cfinvoke component="chestera_cah3.cfc.game" 
 			  method="addWinner">
 		<cfinvokeargument name="gameID" value="#CLIENT.GAMEID#" />
 		<cfinvokeargument name="turnID" value="#CLIENT.TURNID#" />
@@ -17,7 +17,7 @@
 	</cfinvoke>
 
 	<!---What was the question? --->
-	<cfinvoke component="chestera_cah3.cfc.cfc.question" 
+	<cfinvoke component="chestera_cah3.cfc.question" 
 			  method="thisQuestion"
 			  returnvariable="thisQuestion">
 		<cfinvokeargument name="gameID" value="#CLIENT.GAMEID#" />
@@ -26,7 +26,7 @@
 
 
 	<!---Who won? --->
-	<cfinvoke component="chestera_cah3.cfc.cfc.game" 
+	<cfinvoke component="chestera_cah3.cfc.game" 
 			  method="broadcastWinner"
 			  returnVariable="winner" >
 		<cfinvokeargument name="gameID" value="#CLIENT.GAMEID#" />
@@ -35,7 +35,7 @@
 
 <cfelse>
 	<!---Who won? --->
-	<cfinvoke component="chestera_cah3.cfc.cfc.game" 
+	<cfinvoke component="chestera_cah3.cfc.game" 
 			  method="broadcastWinner"
 			  returnVariable="winner" >
 		<cfinvokeargument name="gameID" value="#CLIENT.GAMEID#" />

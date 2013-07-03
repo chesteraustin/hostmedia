@@ -7,7 +7,7 @@
 </cfinvoke>
 
 <!---Get Responses --->
-<cfinvoke component="chestera_cah3.cfc.cfc.game" 
+<cfinvoke component="chestera_cah3.cfc.game" 
 		  method="getResponse"  
 		  returnVariable="thisResponse" >
 	<cfinvokeargument name="gameID" value="#CLIENT.GAMEID#" />

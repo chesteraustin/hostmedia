@@ -11,7 +11,7 @@
 	</cfif>
 
 	<!---Add a game --->
-	<cfinvoke component="chestera_cah3.cfc.cfc.game" 
+	<cfinvoke component="chestera_cah3.cfc.game" 
 			  method="addGame"  
 			  returnVariable="addGame" >
 		<cfinvokeargument name="gameID" value="#CLIENT.GAMEID#" />
@@ -20,7 +20,7 @@
 	</cfinvoke>
 
 	<!---Add a player --->
-	<cfinvoke component="chestera_cah3.cfc.cfc.player" 
+	<cfinvoke component="chestera_cah3.cfc.player" 
 			  method="addPlayer"  
 			  returnVariable="player" >
 		<cfinvokeargument name="cfid" value="#CLIENT.CFID#" />

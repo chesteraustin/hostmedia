@@ -12,7 +12,7 @@
 </cfif>
 
 <!---Add a player --->
-<cfinvoke component="chestera_cah3.cfc.cfc.player" 
+<cfinvoke component="chestera_cah3.cfc.player" 
 		  method="addPlayer"  
 		  returnVariable="player" >
 	<cfinvokeargument name="cfid" value="#CLIENT.CFID#" />
