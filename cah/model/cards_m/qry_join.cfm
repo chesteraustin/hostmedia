@@ -16,7 +16,7 @@
 	</cfif>
 
 	<!---Add a player --->
-	<cfinvoke component="ca_CAH.cfc.player" 
+	<cfinvoke component="chestera_cah3.cfc.cfc.player" 
 			  method="addPlayer"  
 			  returnVariable="player" >
 		<cfinvokeargument name="cfid" value="#CLIENT.CFID#" />

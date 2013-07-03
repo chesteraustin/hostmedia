@@ -1,5 +1,5 @@
 ﻿<!---Post Question to gameRecord table --->
-<cfinvoke component="ca_CAH.cfc.game" 
+<cfinvoke component="chestera_cah3.cfc.cfc.game" 
 		  method="postQuestion"  
 		  returnVariable="game" >
 	<cfinvokeargument name="CFID" value="#CLIENT.CFID#" />
