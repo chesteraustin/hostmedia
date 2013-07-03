@@ -2,7 +2,7 @@
 <cfparam name="client.playerRole" default="answer">
 
 <!---Find a Game --->
-	<cfinvoke component="chestera_cah2.cfc.game" 
+	<cfinvoke component="chestera_cah3.cfc.game" 
 			  method="findGame"  
 			  returnVariable="findGame" >
 	</cfinvoke>

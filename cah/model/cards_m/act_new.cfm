@@ -4,7 +4,7 @@
 <!---Create a New Game --->
 
 	<!---If there is no gameID, start with 1--->
-	<cfinvoke component="chestera_cah2.cfc.game" 
+	<cfinvoke component="chestera_cah3.cfc.game" 
 			  method="nextGameID"  
 			  returnVariable="nextGameID" >
 	</cfinvoke>
