@@ -20,7 +20,7 @@
 <cfset client.turnID = "">
 --->
 <cfdump var="#client#">
-
+<cfdump var="#variables#">
 <cfoutput>
 	<div class="row-fluid">
 		<div class="span2 well well-large">#admin#</div>
