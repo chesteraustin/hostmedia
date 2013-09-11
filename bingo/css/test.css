@@ -1,0 +1,14 @@
+.form-horizontal .control-label{
+  /* text-align:right; */
+  text-align:left;
+  background-color:#ffa;
+}
+
+.form-horizontal .controls{
+  /* text-align:right; */
+	text-align:left;
+	background-color:red;
+}
+
+body {
+}
