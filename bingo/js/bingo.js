@@ -1,5 +1,7 @@
- $(document).ready(function () {
-	$('button').on('click', function (){
-		$('button').attr('disabled', true);
-	});
+$(document).ready(function () {
+	$(".btn").click(function(){
+//		$(this).toggleClass("btn-success");
+		$(this).toggleClass("btn-success");
+//		btnValue = $(this).attr("value");
+	});    	
 });
