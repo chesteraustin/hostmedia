@@ -1,0 +1,286 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"service_request",
+				"Service_Request_Log_ID"
+			],
+			[
+				"Service_Reqe",
+				"Service_Request_Log_ID"
+			],
+			[
+				"service_reqe",
+				"Service_Request_Log_ID"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "808708/samples.cfm",
+			"settings":
+			{
+				"buffer_size": 96,
+				"line_ending": "Windows",
+				"name": "<a href=\"\">"
+			}
+		},
+		{
+			"file": "808708/sample_pdf.cfm",
+			"settings":
+			{
+				"buffer_size": 113,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/ColdFusion10/cfusion/wwwroot/cf_scheduled_jobs/cfimap.cfm",
+		"/C/ColdFusion10/cfusion/wwwroot/cf_scheduled_jobs/cfimap_ca.cfm",
+		"/D/tools/mytools/secure/ServiceRequest/sr_directPaySearch.cfm",
+		"/D/tools/mytools/secure/ServiceRequest/sr_ticket_action.cfm",
+		"/T/cf_scheduled_jobs/cfimap.cfm",
+		"/O/cf_scheduled_jobs/cfimap.cfm",
+		"/Q/cfimap.cfm",
+		"/T/tools/mytools/secure/dossiers/PCD_Upload_Documents_action.cfm",
+		"/T/tools/mytools/secure/dossiers/PCD_Upload_Documents.cfm",
+		"/T/tools/mytools/secure/dossiers/PCD_Upload_Documents_main.cfm",
+		"/T/tools/mytools/secure/dossiers/PCD_Upload_Documents_delete.cfm",
+		"/T/tools/mytools/secure/dossiers/PCD_Upload_Documents_new.cfm",
+		"/T/tools/mytools/secure/dossiers/PCD_Upload_Documents_update.cfm",
+		"/T/tools/mytools/secure/dossiers/showFile.cfm",
+		"/S/cf/TUYS/TUYS-email.cfm",
+		"/C/ColdFusion10/cfusion/wwwroot/cf/TUYS/Tell-Us-Your-Story.cfm",
+		"/C/Users/chestera/Dropbox/USC/06 - June 2013/data.txt",
+		"/C/ColdFusion10/cfusion/wwwroot/cf/TUYS/Tell-Us-Your-Story-action.cfm",
+		"/W/tools/mytools/secure/dossiers/PCD_Upload_Documents_update.cfm",
+		"/W/tools/mytools/secure/dossiers/PCD_Upload_Documents_main.cfm",
+		"/W/tools/mytools/secure/dossiers/PCD_Upload_Documents.cfm",
+		"/W/tools/mytools/secure/dossiers/index.cfm",
+		"/W/tools/mytools/secure/dossiers/showFile.cfm",
+		"/W/tools/portal/index.cfm",
+		"/C/ColdFusion10/cfusion/wwwroot/test/css/test.css",
+		"/T/cf/TUYS/Tell-Us-Your-Story.cfm",
+		"/C/ColdFusion10/cfusion/wwwroot/test/test.cfm",
+		"/T/cf/easc/uflas-file-upload.cfm",
+		"/C/ColdFusion10/cfusion/wwwroot/test/tuys.html",
+		"/C/Users/chestera/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Sample",
+			"<cfmail",
+			"/cfmail",
+			"attachmentfiles",
+			"cffile",
+			"dump",
+			"abort",
+			"person_ccid",
+			"Service_Request_ID",
+			"Service_Request_Log_ID",
+			"Service_Request_ID",
+			">\n",
+			"edu",
+			"@",
+			"cfmail",
+			"susancha@dornsife.usc.edu,sumatija@dornsife.usc.edu",
+			"sumatija@college.usc.edu",
+			"cfmail",
+			"email",
+			"D:\\tools\\mytools\\secure\\ServiceRequest\\",
+			"    ",
+			",",
+			"pop",
+			",",
+			", @"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"chestera@usc.edu",
+			"",
+			"\\t",
+			", \\n",
+			"\"></cfcase>",
+			", \\n",
+			", \\n@",
+			", @\n",
+			", \\n@"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "808708/samples.cfm",
+					"settings":
+					{
+						"buffer_size": 96,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<a href=\"\">",
+							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "808708/sample_pdf.cfm",
+					"settings":
+					{
+						"buffer_size": 113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								40
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"cfi",
+				"cfimap.cfm"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true
+}
