@@ -2,7 +2,7 @@
 
 <cffunction name="getQuestion" access="remote" returnformat="JSON">
 
-	<cfif cgi.server eq "www.chesteraustin.us">
+	<cfif cgi.server_name eq "www.chesteraustin.us">
 	<cfquery name="getQuestion_sql" datasource="chestera_cah">
 		SELECT question_rowid, question
 		FROM questions
@@ -25,7 +25,7 @@
 
 <cffunction name="giveAnswer" access="remote" returnformat="JSON">
 
-	<cfif cgi.server eq "www.chesteraustin.us">
+	<cfif cgi.server_name eq "www.chesteraustin.us">
 	<cfquery name="giveAnswer_sql" datasource="chestera_cah">
 		SELECT answer_rowid, answer
 		FROM answers
