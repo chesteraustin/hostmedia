@@ -3,11 +3,11 @@ $(document).ready(function () {
 		var action = $(this).attr("id");
 		$.ajax({
 			type: 'post',
-			url: 'http://www.chesteraustin.us/cfc/cards.cfc?ReturnFormat=jsonp',
+			url: 'http://www.chesteraustin.us/cfc/cards.cfc?ReturnFormat=json',
 			data: {
 				'method': 'remote_'+action
 			},
-			dataType: 'jsonp',
+			dataType: 'json',
 			success: function(response){
 					console.log(response);
 				}//end success
