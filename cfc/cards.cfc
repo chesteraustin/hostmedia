@@ -2,9 +2,7 @@
 
 <cffunction name="getQuestion" access="remote" returnformat="JSON">
 
-<!---
 	<cfheader name="Access-Control-Allow-Origin" value="*">
---->
 	<cfif cgi.server_name eq "www.chesteraustin.us">
 	<cfquery name="getQuestion_sql" datasource="chestera_cah">
 		SELECT question_rowid, question
