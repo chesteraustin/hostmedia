@@ -1,9 +1,12 @@
 $(document).ready(function () {
 	$("button").click(function(){
 		var action = $(this).attr("id");
+		$("."+action+"Response_li").remove();
 		$.ajax({
 			type: 'post',
-			url: '../cfc/cards.cfc?ReturnFormat=json',
+//			url: 'http://www.chesteraustin.us/cfc/cards.cfc?ReturnFormat=json', //with CORS
+			url: 'http://www.chesteraustin.us/cfc/cards.cfc?ReturnFormat=json', //without CORS
+//			url: '../cfc/cards.cfc?ReturnFormat=json', //without CORS
 			data: {
 				'method': action
 			},
@@ -16,7 +19,7 @@ $(document).ready(function () {
 //					console.log(question_value);
 					$("#"+action+"Response").append(''
 //													+'<li> <a href="#" id="'+id_value+'">'+question_value+'</a></li>'
-													+'<li>'+text_value+'</li>'
+													+'<li class="'+action+'Response_li">'+text_value+'</li>'
 						+'')
 					}//end LOOP
 				}//end success

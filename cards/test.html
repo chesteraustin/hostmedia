@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="App">
+
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js">
+	</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+<div ng-controller="InvoiceCntl">
+	<b>Invoice:</b>
+	<br>
+	<br>
+	<table>
+		<tr>
+			<td>Quantity</td>
+			<td>Cost</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="number" step="1" min="0" ng-model="qty" ng-pattern="/\d+/" required>
+				<input type="number" step="1" min="0" ng-model="cost" required>
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<b>Total:</b> {{qty * cost | currency}}
+</div><!--end ng-controller InvoiceCntl -->
+
+<div ng-app>
+  <div>
+    <label>Name:</label>
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <hr>
+    <h1>Hello {{yourName}}!</h1>
+  </div>
+</div>
+
+</body>
+
+</html>
