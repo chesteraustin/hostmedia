@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 		$.ajax({
 			type: 'post',
-			url: '../lego_services/api.cfc?ReturnFormat=json',
+			url: 'http://www.chesteraustin.us/lego_services/api.cfc?ReturnFormat=json',
 			data: {
 				'method': 'walmartAPI',
 				'searchTerm': 'LEGO '+setNumber,
