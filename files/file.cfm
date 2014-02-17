@@ -1,8 +1,9 @@
 <!---
 <cfset var.myFile = "text.txt">
 <cfset var.myFile = "letter.docx">
---->
 <cfset var.myFile = "letter.pdf">
+--->
+<cfset var.myFile = "letter_2.docx">
 
 <!---Local Call --->
 <cfinvoke component="files" method="getFile" returnvariable="thisFile">
