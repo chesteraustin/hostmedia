@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel='stylesheet' href='css/style.css'/>
-  <script src='js/script.js'></script>
+    <link rel='stylesheet' href='style.css'/>
 </head>
 <body>
-    <div>
+    <div id="header">
+        <div>Enter New Set</div>
+        <div>Collection</div>
+        <div></div>
+    </div>
+    <div id="Input">
         <form>
         <fieldset>
             <legend>Set Details</legend>
@@ -18,12 +22,7 @@
             <label>Price</label><input type="number" name="setPrice">
             <label>Purchased from</label><input type="text" name="purchaseStore">
             <label>Date Purchased</label><input type="date" name="purchaseDate">
-        </fieldset>
-        <fieldset>
-            <legend>Status</legend>
-            <label>Condition</label><input type="number" name="setPrice">
-            <label>Purchased from</label><input type="text" name="purchaseStore">
-        </fieldset>        
+        </fieldset>       
         <fieldset>
             <legend>Status</legend>
             Condition
@@ -36,9 +35,16 @@
            <label>Selling Price</label><input type="number" name="setPrice">
             <label>Purchase from</label><input type="text" name="purchaseStore">
             <label>Date</label><input type="date" name="selldate">
-            
         </fieldset>
         </form>
     </div>
+    <!--This was added to show jQuery function -->
+    <div id="message">
+        <h1>You clicked <span id="messageValue"></span></h1>
+    </div>
+
+    <!--Moved scripts to bottom of page -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src='script.js'></script>
 </body>
 </html>
