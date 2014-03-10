@@ -16,11 +16,11 @@
 <!--- Draw the text. --->
 <cfset ImageDrawText(imgText, "#now()#", 10, 15, textattribs)>
 
-<!--- Write da image. --->
-<cfimage action="write" source="#imgText#">
+<!--- Write image. --->
+<cfimage action="writeToBrowser" source="#imgText#">
 
 <cfxml variable="imageXml">
-	<cfimage action="write" source="#imgText#">
+	<cfimage action="writeToBrowser" source="#imgText#">
 </cfxml>
 
 <cfdump var="#imageXml#">
@@ -30,12 +30,12 @@
 <hr />
 <cfsavecontent variable="thisText">
 <cfoutput>
-<img src="file:///opt/coldfusion8/tmpCache/#imageSrc#"></img>
+<img src="#imageSrc#">
 </cfoutput>
 </cfsavecontent>
 
 
-<cfdocument format="FlashPaper" localurl="true">
+<cfdocument format="FlashPaper" localurl="false">
 <cfoutput>
 #thisText#
 </cfoutput>
