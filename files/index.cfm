@@ -10,7 +10,7 @@
 <cfset ImageSetDrawingColor(imgText,"green")>
 <!--- Set the attributes of the text --->
 <cfset textattribs = StructNew()>
-<cfset textattribs.font="Arial">
+<cfset textattribs.font="Hershey Gothic- English">
 <cfset textattribs.size = 15>
 <cfset textattribs.style = "bolditalic">
 <!--- Draw the text. --->
