@@ -8,13 +8,9 @@
 <cfset ImageSetAntialiasing(imgText)>
 <!--- Set the drawing color to green. --->
 <cfset ImageSetDrawingColor(imgText,"green")>
-<!--- Set the attributes of the text --->
-<cfset textattribs = StructNew()>
-<cfset textattribs.font="Hershey Gothic- English">
-<cfset textattribs.size = 15>
-<cfset textattribs.style = "bolditalic">
+
 <!--- Draw the text. --->
-<cfset ImageDrawText(imgText, "#now()#", 10, 15, textattribs)>
+<cfset ImageDrawText(imgText, "#now()#", 10, 15)>
 
 <!--- Write image. --->
 <cfimage action="writeToBrowser" source="#imgText#">
