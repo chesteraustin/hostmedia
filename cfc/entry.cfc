@@ -13,7 +13,7 @@
 	<cfargument name="Sell_From" default="">
 	<cfargument name="Sell_date" default="">
 	<cfquery name="setEntry" datasource="chestera_main">
-			INSERT INTO Entry (
+			INSERT INTO entry (
 				Set_Name,
 				Set_Number, 
 				Set_Theme, 
@@ -40,9 +40,10 @@
 </cffunction>
 
 <cffunction name="getEntry" access="remote" returnformat="JSON">
-	<cfquery name="getEntry" datasource="chestera_main">
+	<cfquery name="getEntry_sql" datasource="chestera_main">
 		SELECT *
 		FROM entry
 	</cfquery>
+	<cfreturn getEntry_sql>
 </cffunction>
 </cfcomponent>
