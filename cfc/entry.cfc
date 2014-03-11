@@ -45,3 +45,4 @@
 		FROM entry
 	</cfquery>
 </cffunction>
+</cfcomponent>
