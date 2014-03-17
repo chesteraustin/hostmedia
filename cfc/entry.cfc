@@ -29,7 +29,7 @@
 				'#arguments.set_name#', 
 				'#arguments.set_number#', 
 				'#arguments.set_theme#', 
-				'#arguments.pruchase_price#', 
+				'#arguments.purchase_price#', 
 				'#arguments.purchase_from#', 
 				'#arguments.purchase_date#', 
 				'#arguments.status#', 
