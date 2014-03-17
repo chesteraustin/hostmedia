@@ -1,9 +1,9 @@
 <cfcomponent>
-
-<cfheader name="Access-Control-Allow-Origin" value="*">
-<cfsetting showdebugoutput="false">
 <!---
 --->
+<cfheader name="Access-Control-Allow-Origin" value="*">
+<cfsetting showdebugoutput="false">
+
 <cffunction name="setEntry" access="remote" returnformat="JSON">
 	<cfargument name="Set_Name" default="">
 	<cfargument name="Set_Number" default="">

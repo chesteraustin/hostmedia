@@ -1,4 +1,4 @@
-<component>
+<cfcomponent>
 
 <cffunction name="walmartAPI" access="remote" returnformat="JSON">
 <!---
@@ -44,4 +44,4 @@ http://walmartlabs.api.mashery.com/v1/search?query=lego+123&format=json&apiKey=b
 	<cfreturn walmartAPI_JSON>
 </cffunction>
 
-</component>
+</cfcomponent>
