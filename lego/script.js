@@ -1,3 +1,4 @@
+/*
 $(document).ready(function () {
 	$("[type='radio']").click(function(){
 
@@ -9,3 +10,60 @@ $(document).ready(function () {
 
 	})//end click 
 })//end DOCUMENT = READY function
+
+*/
+
+$(document).ready(function () {
+	$("#submit").click(function(){
+        var setName = $("input[name='setName']").val();
+        var setNumber = $("input[name='setNumber']").val();
+        var setTheme = $("input[name='setTheme']").val();
+
+        var retailPrice = $("input[name='retailPrice']").val();
+        var purchaseStore = $("input[name='purchaseStore']").val();
+        var purchaseDate = $("input[name='purchaseDate']").val();
+        var purchasePrice = $("input[name='purchasePrice']").val();
+
+        var condition = $("input[name='condition']").val();
+
+        var sellPrice = $("input[name='sellPrice']").val();
+        var sellStore = $("input[name='sellStore']").val();
+        var selldate = $("input[name='selldate']").val();
+
+        console.log(setName);
+        console.log(setNumber);
+        console.log(setTheme);
+        console.log(retailPrice);
+        console.log(purchaseStore);   
+        console.log(purchaseDate);
+        console.log(purchasePrice);
+        console.log(condition);    
+        console.log(sellPrice);
+        console.log(sellStore);
+        console.log(selldate);
+
+	$.ajax({
+		type: 'post',  //there's two options, post and get --> we want post, here
+		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
+		data: {
+			method: 'entry',
+            Set_Name: setName, //CFARGUMENT: JS_VARIABLE,\
+            Set_Number: setNumber,
+            Set_Theme: setTheme,
+            Retail_Price: retailPrice,
+            Purchase_From: purchaseStore,
+            Purchase_Price: purchasePrice,
+            Purchase_Date: purchaseDate,
+            Status: condition,
+            Sell_Date: sellPrice,
+            Sell_from: sellStore,
+            Sell_date: selldate
+			},
+		contentType: 'json',
+		dataType: 'json',
+		success: function(response) {
+		    console.log("you da man");
+		}
+	});    
+	});	
+});//end DOCUMENT = READY function

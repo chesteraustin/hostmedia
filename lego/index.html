@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel='stylesheet' href='style.css'/>
 </head>
 <body>
@@ -10,12 +11,16 @@
         <div></div>
     </div>
     <div id="Input">
-        <form>
+        <form role="form">
         <fieldset>
             <legend>Set Details</legend>
-            <label>Set Name</label><input type="text" name="setName">
+            <div class="form-group">
+            <label>Set Name</label><input type="text" name="setName" class="form-control">                
+            </div>
+
             <label>Set Number</label><input type="number" name="setNumber">
-            <label>Theme</label><input type="text" name="setName">
+            <label>Retail Price</label><input type="number" name="retailPrice">
+            <label>Theme</label><input type="text" name="setTheme">
         </fieldset>
         <fieldset>
             <legend>Purchase Information</legend>
@@ -26,16 +31,17 @@
         <fieldset>
             <legend>Status</legend>
             Condition
-            <ul><input type="radio" name="Condition" Value="New">New</ul>
-            <ul><input type="radio" name="Condition" Value="Opened">Opened</ul>
-            <ul><input type="radio" name="Condition" Value="Opened">Sold</ul>
+            <ul><input type="radio" name="condition" Value="New">New</ul>
+            <ul><input type="radio" name="condition" Value="Opened">Opened</ul>
+            <ul><input type="radio" name="condition" Value="Opened">Sold</ul>
         </fieldset>
         <fieldset>
             <legend>Selling Information</legend>
-           <label>Selling Price</label><input type="number" name="setPrice">
-            <label>Purchase from</label><input type="text" name="purchaseStore">
+           <label>Selling Price</label><input type="number" name="sellPrice">
+            <label>Purchase from</label><input type="text" name="sellStore">
             <label>Date</label><input type="date" name="selldate">
         </fieldset>
+        <input type="button" name="submit" id="submit" value="Enter"></form>
         </form>
     </div>
     <!--This was added to show jQuery function -->
@@ -44,7 +50,7 @@
     </div>
 
     <!--Moved scripts to bottom of page -->
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src='script.js'></script>
 </body>
 </html>
