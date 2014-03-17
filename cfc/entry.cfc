@@ -1,7 +1,9 @@
 <cfcomponent>
-<cfsetting showdebugoutput="false">
-<cfheader name="Access-Control-Allow-Origin" value="*">
 
+<cfheader name="Access-Control-Allow-Origin" value="*">
+<cfsetting showdebugoutput="false">
+<!---
+--->
 <cffunction name="setEntry" access="remote" returnformat="JSON">
 	<cfargument name="Set_Name" default="">
 	<cfargument name="Set_Number" default="">
@@ -13,6 +15,7 @@
 	<cfargument name="Sell_Price" default="">
 	<cfargument name="Sell_From" default="">
 	<cfargument name="Sell_date" default="">
+<!---
 	<cfquery name="setEntry" datasource="chestera_main">
 			INSERT INTO entry (
 				Set_Name,
@@ -37,7 +40,8 @@
 				'#arguments.sell_from#', 
 				'#arguments.sell_date#');
 	</cfquery>
-	<cfreturn setEntry>
+--->
+	<cfreturn true>
 </cffunction>
 
 <cffunction name="getEntry" access="remote" returnformat="JSON">
