@@ -1,4 +1,5 @@
 <cfcomponent>
+<cfsetting showdebugoutput="false">
 <cfheader name="Access-Control-Allow-Origin" value="*">
 
 <cffunction name="setEntry" access="remote" returnformat="JSON">
