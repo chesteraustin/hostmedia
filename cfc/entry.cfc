@@ -7,9 +7,10 @@
 
 <!--- CORS - Cross Origin Resource Sharing --->
 <cfheader name="Access-Control-Allow-Origin" value="*" />
-<!---
 <cfheader name="Access-Control-Allow-Methods" value="GET,PUT,POST,DELETE" />
 <cfheader name="Access-Control-Allow-Headers" value="Content-Type" />
+<!---
+
 <cfheader name="Content-Type" value="application/JSON; charset=utf8" />
 <cfsetting showdebugoutput="false">
 --->
