@@ -1,7 +1,21 @@
 <cfcomponent>
-<cfheader name="Access-Control-Allow-Origin" value="*">
+<!---
 
-<cffunction name="setEntry" access="remote" returnformat="JSON">
+<cfheader name="Access-Control-Allow-Origin" value="*">
+<cfheader name=”Access-Control-Allow-Origin” value=”*”>
+--->
+
+<!--- CORS - Cross Origin Resource Sharing --->
+<cfheader name="Access-Control-Allow-Origin" value="*" />
+<cfheader name="Access-Control-Allow-Methods" value="GET,PUT,POST,DELETE" />
+<cfheader name="Access-Control-Allow-Headers" value="Content-Type" />
+<!---
+
+<cfheader name="Content-Type" value="application/JSON; charset=utf8" />
+<cfsetting showdebugoutput="false">
+--->
+
+<cffunction name="setEntry" access="remote">
 	<cfargument name="Set_Name" default="">
 	<cfargument name="Set_Number" default="">
 	<cfargument name="Set_Theme" default="">
@@ -12,6 +26,7 @@
 	<cfargument name="Sell_Price" default="">
 	<cfargument name="Sell_From" default="">
 	<cfargument name="Sell_date" default="">
+
 	<cfquery name="setEntry" datasource="chestera_main">
 			INSERT INTO entry (
 				Set_Name,
@@ -28,7 +43,7 @@
 				'#arguments.set_name#', 
 				'#arguments.set_number#', 
 				'#arguments.set_theme#', 
-				'#arguments.pruchase_price#', 
+				'#arguments.purchase_price#', 
 				'#arguments.purchase_from#', 
 				'#arguments.purchase_date#', 
 				'#arguments.status#', 
@@ -36,7 +51,7 @@
 				'#arguments.sell_from#', 
 				'#arguments.sell_date#');
 	</cfquery>
-	<cfreturn setEntry>
+	<cfreturn true>
 </cffunction>
 
 <cffunction name="getEntry" access="remote" returnformat="JSON">

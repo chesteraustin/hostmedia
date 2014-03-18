@@ -43,11 +43,12 @@ $(document).ready(function () {
         console.log(selldate);
 
 	$.ajax({
-		type: 'post',  //there's two options, post and get --> we want post, here
-		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
+		type: 'get',  //there's two options, post and get --> we want post, here
+		url: '../cfc/entry.cfc?ReturnFormat=json',  
+//		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
 		data: {
-			method: 'entry',
-            Set_Name: setName, //CFARGUMENT: JS_VARIABLE,\
+			method: 'setEntry',
+            Set_Name: setName, //CFARGUMENT: JS_VARIABLE
             Set_Number: setNumber,
             Set_Theme: setTheme,
             Retail_Price: retailPrice,
@@ -63,7 +64,7 @@ $(document).ready(function () {
 		dataType: 'json',
 		success: function(response) {
 		    console.log("you da man");
-		}
-	});    
+			}
+		});    
 	});	
 });//end DOCUMENT = READY function
