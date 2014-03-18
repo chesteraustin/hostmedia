@@ -55,7 +55,7 @@ $(document).ready(function () {
             Purchase_Price: purchasePrice,
             Purchase_Date: purchaseDate,
             Status: condition,
-            Sell_Date: sellPrice,
+            Sell_price: sellPrice,
             Sell_from: sellStore,
             Sell_date: selldate
 			},
