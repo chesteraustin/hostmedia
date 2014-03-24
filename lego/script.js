@@ -41,11 +41,11 @@ $(document).ready(function () {
         console.log(sellPrice);
         console.log(sellStore);
         console.log(selldate);
-
+    $.support.cors = true;
 	$.ajax({
-		type: 'get',  //there's two options, post and get --> we want post, here
-		url: '../cfc/entry.cfc?ReturnFormat=json',  
-//		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
+		type: 'GET',  //there's two options, post and get --> we want post, here
+//		url: '../cfc/entry.cfc?ReturnFormat=json',  
+		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
 		data: {
 			method: 'setEntry',
             Set_Name: setName, //CFARGUMENT: JS_VARIABLE
