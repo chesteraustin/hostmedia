@@ -4,6 +4,10 @@
 <cfheader name="Access-Control-Allow-Headers" value="Content-Type" />
 
 <cffunction name="setEntry" access="remote">
+	<cfscript>
+		var response = getPageContext().getResponse();
+		response.setHeader("Access-Control-Allow-Origin","*");
+	</cfscript>
 	<cfargument name="Set_Name" default="">
 	<cfargument name="Set_Number" default="">
 	<cfargument name="Set_Theme" default="">
