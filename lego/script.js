@@ -43,7 +43,7 @@ $(document).ready(function () {
         console.log(selldate);
     $.support.cors = true;
 	$.ajax({
-		type: 'GET',  //there's two options, post and get --> we want post, here
+		type: 'POST',  //there's two options, post and get --> we want post, here
 //		url: '../cfc/entry.cfc?ReturnFormat=json',  
 		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
 		data: {

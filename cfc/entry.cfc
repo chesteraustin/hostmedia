@@ -7,6 +7,8 @@
 	<cfscript>
 		var response = getPageContext().getResponse();
 		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setHeader("Access-Control-Allow-Headers","Origin, X-Authorization");
+		response.setHeader("Access-Control-Allow-Methods","GET, PUT, POST, DELETE, OPTIONS");
 	</cfscript>
 	<cfargument name="Set_Name" default="">
 	<cfargument name="Set_Number" default="">
