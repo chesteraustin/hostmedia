@@ -68,3 +68,9 @@ $(document).ready(function () {
 		});    
 	});	
 });//end DOCUMENT = READY function
+
+$(document).ready(function() {
+    $('#myTable').dataTable( {
+        "sAjaxSource": "http://www.sprymedia.co.uk/dataTables/json.php"
+    } );
+} );
