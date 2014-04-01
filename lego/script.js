@@ -44,8 +44,8 @@ $(document).ready(function () {
 
 	$.ajax({
 		type: 'get',  //there's two options, post and get --> we want post, here
-		url: '../cfc/entry.cfc?ReturnFormat=json',  
-//		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
+//		url: '../cfc/entry.cfc?ReturnFormat=json',  
+		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
 		data: {
 			method: 'setEntry',
             Set_Name: setName, //CFARGUMENT: JS_VARIABLE
@@ -63,8 +63,21 @@ $(document).ready(function () {
 		contentType: 'json',
 		dataType: 'json',
 		success: function(response) {
-		    console.log("you da man");
-			}
+            console.log("you da man");
+            }
 		});    
 	});	
 });//end DOCUMENT = READY function
+
+$(document).ready(function() {
+    $('#myTable').dataTable({
+        "bProcessing": true,
+        "bServerSide": true,
+        "sAjaxSource": "http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json&method=getEntry",
+        "fnServerParams": function ( aoData ) {
+            aoData.push( {
+                "ReturnFormat": "json", 
+                "method": "getEntry" } );
+        }
+    });
+} );
