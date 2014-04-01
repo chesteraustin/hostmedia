@@ -90,7 +90,12 @@
 		SELECT *
 		FROM entry
 	</cfquery>
-	<cfreturn getEntry_sql>
+
+	<cfscript>
+		local.myString = StructNew();
+  		local.myString['aaData'] = QueryToArray(getEntry_sql);
+  		return local.myString;
+	</cfscript>
 </cffunction>
 
 <cffunction name="testEntry" access="remote" returnformat="JSON">
