@@ -1,15 +1,52 @@
 <cfcomponent>
-<cfheader name="Access-Control-Allow-Origin" value="*" />
-<cfheader name="Access-Control-Allow-Methods" value="GET,PUT,POST,DELETE,OPTIONS" />
-<cfheader name="Access-Control-Allow-Headers" value="Content-Type" />
-<!---
-<cffunction name="setEntry" access="remote">
+<cfprocessingdirective suppresswhitespace="true">
+
+<cffunction name="QueryToArray" access="public" returntype="array" output="false"
+	hint="This turns a query into an array of structures.">
+
+	<!--- Define arguments. --->
+	<cfargument name="Data" type="query" required="yes" />
+
 	<cfscript>
-		var response = getPageContext().getResponse();
-		response.setHeader("Access-Control-Allow-Origin","*");
-		response.setHeader("Access-Control-Allow-Headers","Origin, X-Authorization");
-		response.setHeader("Access-Control-Allow-Methods","GET, PUT, POST, DELETE, OPTIONS");
+
+		// Define the local scope.
+		var LOCAL = StructNew();
+
+		// Get the column names as an array.
+		LOCAL.Columns = ListToArray( ARGUMENTS.Data.ColumnList );
+
+		// Create an array that will hold the query equivalent.
+		LOCAL.QueryArray = ArrayNew( 1 );
+
+		// Loop over the query.
+		for (LOCAL.RowIndex = 1 ; LOCAL.RowIndex LTE ARGUMENTS.Data.RecordCount ; LOCAL.RowIndex = (LOCAL.RowIndex + 1)){
+
+			// Create a row structure.
+			LOCAL.Row = StructNew();
+
+			// Loop over the columns in this row.
+			for (LOCAL.ColumnIndex = 1 ; LOCAL.ColumnIndex LTE ArrayLen( LOCAL.Columns ) ; LOCAL.ColumnIndex = (LOCAL.ColumnIndex + 1)){
+
+				// Get a reference to the query column.
+				LOCAL.ColumnName = LOCAL.Columns[ LOCAL.ColumnIndex ];
+
+				// Store the query cell value into the struct by key.
+				LOCAL.Row[ LOCAL.ColumnName ] = ARGUMENTS.Data[ LOCAL.ColumnName ][ LOCAL.RowIndex ];
+
+			}
+
+			// Add the structure to the query array.
+			ArrayAppend( LOCAL.QueryArray, LOCAL.Row );
+
+		}
+
+		// Return the array equivalent.
+		return( LOCAL.QueryArray );
+
 	</cfscript>
+</cffunction>
+
+<cffunction name="setEntry" access="remote" returntype="boolean">
 	<cfargument name="Set_Name" default="" />
 	<cfargument name="Set_Number" default="" />
 	<cfargument name="Set_Theme" default="" />
@@ -55,28 +92,24 @@
 	</cfquery>
 	<cfreturn getEntry_sql>
 </cffunction>
---->
 
 <cffunction name="testEntry" access="remote" returnformat="JSON">
-	<cfsavecontent variable="myString">
-{
-    "firstName": "John",
-    "lastName": "Smith",
-    "isAlive": true,
-    "age": 25,
-    "height_cm": 167.64,
-    "address": {
-        "streetAddress": "21 2nd Street",
-        "city": "New York",
-        "state": "NY",
-        "postalCode": "10021-3100"
-    },
-    "phoneNumbers": [
-        { "type": "home", "number": "212 555-1234" },
-        { "type": "fax",  "number": "646 555-4567" }
-    ]
-}
-	</cfsavecontent>
-	<cfreturn myString>
+<!---
+http://127.0.0.1:8500/hostmedia/cfc/entry.cfc?ReturnFormat=json&method=testEntry
+ --->
+	<cfset JSONString = queryNew("ID, Name", "integer, VarChar")>
+	<cfset newRow = QueryAddRow(JSONString, 1)>
+	<cfset thisCell = QuerySetCell(JSONString, "ID", 1)>
+	<cfset thisCell = QuerySetCell(JSONString, "Name", "myName")>
+
+	<cfscript>
+		local.myString = StructNew();
+  		local.myString['aaData'] = QueryToArray(JSONString);
+  		return local.myString;
+	</cfscript>
+<!---
+	<cfreturn var.JSONString>
+--->
 </cffunction>
+</cfprocessingdirective>
 </cfcomponent>
