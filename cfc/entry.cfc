@@ -1,9 +1,15 @@
 <cfcomponent>
 <cfheader name="Access-Control-Allow-Origin" value="*" />
-<cfheader name="Access-Control-Allow-Methods" value="GET,PUT,POST,DELETE" />
+<cfheader name="Access-Control-Allow-Methods" value="GET,PUT,POST,DELETE,OPTIONS" />
 <cfheader name="Access-Control-Allow-Headers" value="Content-Type" />
 
 <cffunction name="setEntry" access="remote">
+	<cfscript>
+		var response = getPageContext().getResponse();
+		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setHeader("Access-Control-Allow-Headers","Origin, X-Authorization");
+		response.setHeader("Access-Control-Allow-Methods","GET, PUT, POST, DELETE, OPTIONS");
+	</cfscript>
 	<cfargument name="Set_Name" default="">
 	<cfargument name="Set_Number" default="">
 	<cfargument name="Set_Theme" default="">

@@ -41,9 +41,13 @@ $(document).ready(function () {
         console.log(sellPrice);
         console.log(sellStore);
         console.log(selldate);
-
+    $.support.cors = true;
 	$.ajax({
+<<<<<<< HEAD
 		type: 'get',  //there's two options, post and get --> we want post, here
+=======
+		type: 'POST',  //there's two options, post and get --> we want post, here
+>>>>>>> 07302e532b8633b0005f86183c96ab0c97a0ca37
 //		url: '../cfc/entry.cfc?ReturnFormat=json',  
 		url: 'http://www.chesteraustin.us/cfc/entry.cfc?ReturnFormat=json',  
 		data: {
