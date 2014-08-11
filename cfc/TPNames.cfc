@@ -18,5 +18,6 @@
 				'#ARGUMENTS.GENDER#'
 			)
 	</cfquery>
+	<cfreturn addName_sql>
 </cffunction>
 </cfcomponent>
