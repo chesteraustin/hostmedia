@@ -20,4 +20,5 @@
 	</cfquery>
 	<cfreturn addName_sql>
 </cffunction>
+</cfprocessingdirective>
 </cfcomponent>
