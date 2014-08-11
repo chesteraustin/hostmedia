@@ -18,7 +18,11 @@
 				'#ARGUMENTS.GENDER#'
 			)
 	</cfquery>
-	<cfreturn addName_sql>
+	<cfquery name="checkName" datasource="chestera_main">
+		SELECT *
+		FROM TPNames
+	</cfquery>
+	<cfreturn checkName>
 </cffunction>
 </cfprocessingdirective>
 </cfcomponent>
