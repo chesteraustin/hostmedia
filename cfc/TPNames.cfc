@@ -50,7 +50,7 @@
 		<cfif arguments.gender neq "">
 		AND Gender = '#ARGUMENTS.gender#'
 		</cfif>
-		ORDER BY Position
+		ORDER BY Name_Position
 	</cfquery>
 	<cfreturn getName>
 </cffunction>
