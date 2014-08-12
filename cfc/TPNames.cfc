@@ -28,7 +28,7 @@
 	<cfargument name="gender" default="gender">
 
 	<cfquery name="addName_sql" datasource="chestera_main">
-		DELETE TPNames
+		DELETE FROM TPNames
 		WHERE 0=0
 		AND Gender = '#ARGUMENTS.GENDER#'
 	</cfquery>
