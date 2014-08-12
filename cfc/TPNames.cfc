@@ -1,5 +1,4 @@
 <cfcomponent>
-<cfprocessingdirective suppresswhitespace="true">
 
 <cffunction name="addName" access="remote">
 	<cfargument name="name" default="name">
@@ -55,5 +54,4 @@
 	<cfreturn getNames>
 </cffunction>
 
-</cfprocessingdirective>
 </cfcomponent>
