@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+<!--
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery.ui.dialog.css">
+-->
+
     <link rel='stylesheet' href='names.css'/>
 </head>
 <body>
 
+<div>
+	<ol id="listNames">
+	</ol>
+</div>
+
+<button name="newNameBtn" id="newNameBtn">Add a new name.</button>
+
+<button name="clearNamesBtn" id="clearNamesBtn">Clear names</button>
+
+<button name="saveNamesBtn" id="saveNamesBtn">Save names</button>
+
+<div id="newNameModal" title="New Name for TP">
+	<input type="text" id="newName" name="newName" placeholder="New Name" />
+</div>
     <!--Moved scripts to bottom of page -->
-    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
     <script src='names.js'></script>
 </body>
 </html>
