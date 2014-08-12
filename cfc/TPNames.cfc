@@ -43,7 +43,7 @@
 <cffunction name="getNames" access="remote">
 	<cfargument name="gender" default="">
 
-	<cfquery name="checkName" datasource="chestera_main">
+	<cfquery name="getNames" datasource="chestera_main">
 		SELECT *
 		FROM TPNames
 		WHERE 0=0
@@ -52,7 +52,7 @@
 		</cfif>
 		ORDER BY Name_Position
 	</cfquery>
-	<cfreturn getName>
+	<cfreturn getNames>
 </cffunction>
 
 </cfprocessingdirective>
