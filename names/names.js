@@ -111,7 +111,7 @@ function clearNames(){
 
 function saveNames(){ 
 	//Empty list
-	clearNames();
+	$("#listNames").empty();
 
 	//Add Name
 	$("li").each(function(index){
