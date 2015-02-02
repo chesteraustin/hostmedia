@@ -11,7 +11,6 @@
 
 	<cfquery name="insertRecord" datasource="chestera_main">
 		INSERT INTO pumpRecord (
-			pumpID,
 			pumpDate,
 			pumpTime,
 			pumpTotal,
@@ -21,7 +20,6 @@
 			storageLocation			
 		)
 		VALUES (
-			pumpRecord_seq.nextVal,
 			'#ARGUMENTS.PUMPDATE#',
 			'#ARGUMENTS.PUMPTIME#',
 			#VAR.PUMPTOTAL#,

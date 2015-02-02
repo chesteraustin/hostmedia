@@ -7,10 +7,32 @@
 	<cfinvokeargument name="storageLocation" value="freezer bag">
 </cfinvoke>
 
-<h1>CRUD Insert completed</h1>
+<h1>CRUD Insert 1 completed</h1>
+
+<cfinvoke component="crud" method="insert">
+	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), "DD-MMM-YY")#">	
+	<cfinvokeargument name="pumpTime" value="#timeFormat(now(), "short")#">
+	<cfinvokeargument name="pumpUnit" value="mL">
+	<cfinvokeargument name="leftSide" value="0">
+	<cfinvokeargument name="rightSide" value="0">
+	<cfinvokeargument name="storageLocation" value="freezer bag">
+</cfinvoke>
+
+<h1>CRUD Insert 2 completed</h1>
+
+<cfinvoke component="crud" method="insert">
+	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), "DD-MMM-YY")#">	
+	<cfinvokeargument name="pumpTime" value="#timeFormat(now(), "short")#">
+	<cfinvokeargument name="pumpUnit" value="mL">
+	<cfinvokeargument name="leftSide" value="0">
+	<cfinvokeargument name="rightSide" value="0">
+	<cfinvokeargument name="storageLocation" value="freezer bag">
+</cfinvoke>
+
+<h1>CRUD Insert 3 completed</h1>
 
 <cfinvoke component="crud" method="update">
-	<cfinvokeargument name="pumpID" value="2"> 
+	<cfinvokeargument name="pumpID" value="1"> 
 	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), "DD-MMM-YY")#">	
 	<cfinvokeargument name="pumpTime" value="#timeFormat(now(), "short")#">
 	<cfinvokeargument name="pumpUnit" value="oz">
