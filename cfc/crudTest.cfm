@@ -1,5 +1,5 @@
 ﻿<cfinvoke component="crud" method="insert">
-	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), "DD-MMM-YY")#">	
+	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), 'YYYY-MM-DD')#">
 	<cfinvokeargument name="pumpTime" value="#timeFormat(now(), "short")#">
 	<cfinvokeargument name="pumpUnit" value="mL">
 	<cfinvokeargument name="leftSide" value="0">
@@ -10,7 +10,7 @@
 <h1>CRUD Insert 1 completed</h1>
 
 <cfinvoke component="crud" method="insert">
-	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), "DD-MMM-YY")#">	
+	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), 'YYYY-MM-DD')#">
 	<cfinvokeargument name="pumpTime" value="#timeFormat(now(), "short")#">
 	<cfinvokeargument name="pumpUnit" value="mL">
 	<cfinvokeargument name="leftSide" value="0">
@@ -21,7 +21,7 @@
 <h1>CRUD Insert 2 completed</h1>
 
 <cfinvoke component="crud" method="insert">
-	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), "DD-MMM-YY")#">	
+	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), 'YYYY-MM-DD')#">
 	<cfinvokeargument name="pumpTime" value="#timeFormat(now(), "short")#">
 	<cfinvokeargument name="pumpUnit" value="mL">
 	<cfinvokeargument name="leftSide" value="0">
@@ -33,7 +33,7 @@
 
 <cfinvoke component="crud" method="update">
 	<cfinvokeargument name="pumpID" value="1"> 
-	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), "DD-MMM-YY")#">	
+	<cfinvokeargument name="pumpDate" value="#dateFormat(now(), 'YYYY-MM-DD')#">
 	<cfinvokeargument name="pumpTime" value="#timeFormat(now(), "short")#">
 	<cfinvokeargument name="pumpUnit" value="oz">
 	<cfinvokeargument name="leftSide" value="5">
