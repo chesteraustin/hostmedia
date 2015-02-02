@@ -60,7 +60,7 @@
 	<cfargument name="pumpID" default="" required="true"> 
 
 	<cfquery name="deleteRecord" datasource="chestera_main">
-		DELETE pumpRecord
+		DELETE FROM pumpRecord
 		WHERE 0=0
 		AND pumpID = #ARGUMENTS.PUMPID#
 	</cfquery>
