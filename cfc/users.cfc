@@ -62,19 +62,19 @@
 		FROM USERS
 		WHERE 0=0
 		<cfif arguments.USERNAME neq "">
-		and username = #ARGUMENTS.USERNAME#
+		and username = '#ARGUMENTS.USERNAME#'
 		</cfif>
 		<cfif arguments.ROLE neq "">
-		and role = #ARGUMENTS.ROLE#
+		and role = '#ARGUMENTS.ROLE#'
 		</cfif>
 		<cfif arguments.CFID neq "">
-		and CFID = #ARGUMENTS.CFID#
+		and CFID = '#ARGUMENTS.CFID#'
 		</cfif>
 		<cfif arguments.CFTOKEN neq "">
-		and CFTOKEN = #ARGUMENTS.CFTOKEN#
+		and CFTOKEN = '#ARGUMENTS.CFTOKEN#'
 		</cfif>
 		<cfif arguments.UUID neq "">
-		and UUID = #ARGUMENTS.UUID#
+		and UUID = '#ARGUMENTS.UUID#'
 		</cfif>
 	</cfquery>
 	<cfreturn generalSearch_sql>
