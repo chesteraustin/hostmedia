@@ -1,6 +1,6 @@
 ﻿<cfcomponent>
 
-<cffunction name="generalSearch">
+<cffunction name="generalSearch"  access="remote">
 	<cfargument name="pumpID" default="" required="true"> 
 	<cfquery name="generalSearch_sql" datasource="chestera_main">
 		SELECT *

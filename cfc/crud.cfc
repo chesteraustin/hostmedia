@@ -1,5 +1,5 @@
 ﻿<cfcomponent>
-<cffunction name="insert">
+<cffunction name="insert" access="remote">
 	<cfargument name="pumpDate" default="#now()#">	
 	<cfargument name="pumpTime" default="#now()#">	
 	<cfargument name="pumpUnit" default="mL">	
@@ -31,7 +31,7 @@
 	</cfquery>
 </cffunction>
 
-<cffunction name="update">
+<cffunction name="update" access="remote">
 	<cfargument name="pumpID" default="" required="true"> 
 	<cfargument name="pumpDate" default="#now()#">	
 	<cfargument name="pumpTime" default="#now()#">	
@@ -56,7 +56,7 @@
 	</cfquery>
 </cffunction>
 
-<cffunction name="delete">
+<cffunction name="delete" access="remote">
 	<cfargument name="pumpID" default="" required="true"> 
 
 	<cfquery name="deleteRecord" datasource="chestera_main">
