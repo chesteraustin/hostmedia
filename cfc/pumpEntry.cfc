@@ -6,6 +6,7 @@
 	<cfargument name="leftSide" default="0">
 	<cfargument name="rightSide" default="0">
 	<cfargument name="storageLocation" default="freezer bag">
+	<cfargument name="username" default="" required="required">
 
 	<cfset var.pumpTotal = arguments.leftSide + arguments.rightSide>
 
@@ -17,7 +18,8 @@
 			pumpUnit,
 			leftSide,
 			rightSide,
-			storageLocation			
+			storageLocation,
+			username
 		)
 		VALUES (
 			'#ARGUMENTS.PUMPDATE#',
@@ -26,7 +28,8 @@
 			'#ARGUMENTS.PUMPUNIT#',
 			#ARGUMENTS.LEFTSIDE#,
 			#ARGUMENTS.RIGHTSIDE#,
-			'#ARGUMENTS.STORAGELOCATION#'
+			'#ARGUMENTS.STORAGELOCATION#',
+			'#ARGUMENTS.USERNAME#'
 		)
 	</cfquery>
 </cffunction>
