@@ -53,8 +53,8 @@
 <cffunction name="search" access="remote">
 	<cfargument name="userName" default="">	
 	<cfargument name="role" default="">
-	<cfargument name="CFID" default="">
-	<cfargument name="CFTOKEN" default="">
+	<cfargument name="CFID" default="#client.CFID#">
+	<cfargument name="CFTOKEN" default="#client.CFTOKEN#">
 	<cfargument name="UUID" default="">
 
 	<cfquery name="generalSearch_sql" datasource="chestera_main">
