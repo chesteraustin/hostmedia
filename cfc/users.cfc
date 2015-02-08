@@ -59,7 +59,7 @@
 
 	<cfquery name="generalSearch_sql" datasource="chestera_main">
 		SELECT *
-		FROM USERS
+		FROM users
 		WHERE 0=0
 		<cfif arguments.USERNAME neq "">
 		and username = '#ARGUMENTS.USERNAME#'
