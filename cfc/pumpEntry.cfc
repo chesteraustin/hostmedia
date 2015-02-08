@@ -6,7 +6,7 @@
 	<cfargument name="leftSide" default="0">
 	<cfargument name="rightSide" default="0">
 	<cfargument name="storageLocation" default="freezer bag">
-	<cfargument name="username" default="" required="required">
+	<cfargument name="username" default="" required="true">
 
 	<cfset var.pumpTotal = arguments.leftSide + arguments.rightSide>
 
