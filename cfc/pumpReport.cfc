@@ -5,7 +5,7 @@
 	<cfquery name="generalSearch_sql" datasource="chestera_main">
 		SELECT 
 			pumpID,
-			date_format(pumpDate, '%m-%d-%Y') as pumpDate,
+			date_format(pumpDate, '%Y-%m-%d') as pumpDate,
 			pumpTime,
 			pumpTotal,
 			pumpUnit,
