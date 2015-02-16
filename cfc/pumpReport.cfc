@@ -18,6 +18,7 @@
 		<cfif arguments.pumpID neq "">
 		and pumpID = #ARGUMENTS.PUMPID#
 		</cfif>
+		ORDER BY pumpDate
 	</cfquery>
 	<cfreturn generalSearch_sql>
 </cffunction>
