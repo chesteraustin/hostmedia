@@ -4,9 +4,7 @@
 	<cfset THIS.clientManagement = "Yes" />
 	<cfset THIS.clientStorage = "cookie" />
 
-	<!---
-	<cfset THIS.ApplicationTimeout = CreateTimeSpan( 0, 0, 1, 0 ) />
+	<cfset THIS.ApplicationTimeout = CreateTimeSpan( 365, 0, 0, 0 ) />
 	<cfset THIS.SessionManagement = true />
 	<cfset THIS.SetClientCookies = false /> 
---->
 </cfcomponent>
