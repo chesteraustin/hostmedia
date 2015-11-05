@@ -1,7 +1,7 @@
 ﻿<cfcomponent>
 
 <cffunction name="guestList"  access="remote">
-	<cfargument name="guestID" default="" required=""> 
+	<cfargument name="guestID" default=""> 
 	<cfquery name="guestList_sql" datasource="chestera_main">
 		SELECT
 			guestID,
