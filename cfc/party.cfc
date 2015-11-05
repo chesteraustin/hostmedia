@@ -19,7 +19,11 @@
 		</cfif>
 		ORDER BY 1
 	</cfquery>
-	<cfreturn guestList_sql>
+	<!---Serialize and Deserialize the cfquery to shortcut obtaining a Structure--->
+	<cfset queryAsStruct = DeSerializeJSON(SerializeJSON(guestList_sql))>
+	<!---Now serialize the data key of the struct--->
+	<cfset guestList_JSON = SerializeJSON(queryAsStruct.data)>
+	<cfreturn guestList_JSON>
 </cffunction>
 
 </cfcomponent>
