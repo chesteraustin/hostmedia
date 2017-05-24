@@ -12,7 +12,6 @@
             <cfhttpparam type="url" name="term" value="#URLEncodedFormat(arguments.term)#">
             <cfhttpparam type="url" name="location" value="#URLEncodedFormat(arguments.location)#">
         </cfhttp>
-        <cfdump var="#cfhttp#">
         <cfset yelpResponse = cfhttp.fileContent>
     <cfelse>
         <cfset yelpResponse = "Wrong Key">
