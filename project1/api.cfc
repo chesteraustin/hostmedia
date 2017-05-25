@@ -3,6 +3,10 @@
     <cfargument name="term" default="" required="true">
     <cfargument name="location" default="" required="true">
     <cfargument name="categories" default="" required="true">
+    <cfargument name="radius" default="" required="true">
+    <cfargument name="open_now" default="" required="true">
+    <cfargument name="sort_by" default="" required="true">
+
     <cfargument name="key" default="" required="true">
 
     <cfset local.correctKey = "1234567890">
@@ -13,6 +17,9 @@
             <cfhttpparam type="url" name="term" value="#URLEncodedFormat(arguments.term)#">
             <cfhttpparam type="url" name="location" value="#URLEncodedFormat(arguments.location)#">
             <cfhttpparam type="url" name="categories" value="#URLEncodedFormat(arguments.categories)#">
+            <cfhttpparam type="url" name="radius" value="#URLEncodedFormat(arguments.radius)#">
+            <cfhttpparam type="url" name="open_now" value="#URLEncodedFormat(arguments.open_now)#">
+            <cfhttpparam type="url" name="sort_by" value="#URLEncodedFormat(arguments.sort_by)#">
         </cfhttp>
         <cfset yelpResponse = cfhttp.fileContent>
     <cfelse>
