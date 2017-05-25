@@ -6,6 +6,7 @@
     <cfargument name="radius" default="" required="true">
     <cfargument name="open_now" default="" required="true">
     <cfargument name="sort_by" default="" required="true">
+    <cfargument name="limit" default="" required="true">
 
     <cfargument name="key" default="" required="true">
 
@@ -20,6 +21,7 @@
             <cfhttpparam type="url" name="radius" value="#URLEncodedFormat(arguments.radius)#">
             <cfhttpparam type="url" name="open_now" value="#URLEncodedFormat(arguments.open_now)#">
             <cfhttpparam type="url" name="sort_by" value="#URLEncodedFormat(arguments.sort_by)#">
+            <cfhttpparam type="url" name="limit" value="#URLEncodedFormat(arguments.limit)#">
         </cfhttp>
         <cfset yelpResponse = cfhttp.fileContent>
     <cfelse>
