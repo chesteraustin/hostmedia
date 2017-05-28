@@ -2,6 +2,8 @@
 <cffunction name="getRecommendations" access="remote">
     <cfargument name="term" default="" required="true">
     <cfargument name="location" default="" required="true">
+    <cfargument name="latitude" default="" required="true">
+    <cfargument name="longitude" default="" required="true">
     <cfargument name="categories" default="" required="true">
     <cfargument name="radius" default="" required="true">
     <cfargument name="open_now" default="" required="true">
@@ -17,6 +19,8 @@
             <cfhttpparam type="Header" name="Authorization"  value="Bearer 5u1vBzlUZtkYZgd-AGdYh17UWZiTW69u70bpFgnGUEwwhCLXjJV9qoveHkK6QKyryr81NwG4YtckIsnfA88qa7GZAov95IvyOaJnjvArumbCjlvp2eXr3UOPrP8kWXYx"> 
             <cfhttpparam type="url" name="term" value="#URLEncodedFormat(arguments.term)#">
             <cfhttpparam type="url" name="location" value="#URLEncodedFormat(arguments.location)#">
+            <cfhttpparam type="url" name="latitude" value="#URLEncodedFormat(arguments.latitude)#">
+            <cfhttpparam type="url" name="longitude" value="#URLEncodedFormat(arguments.longitude)#">
             <cfhttpparam type="url" name="categories" value="#URLEncodedFormat(arguments.categories)#">
             <cfhttpparam type="url" name="radius" value="#URLEncodedFormat(arguments.radius)#">
             <cfhttpparam type="url" name="open_now" value="#URLEncodedFormat(arguments.open_now)#">
