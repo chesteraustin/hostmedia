@@ -32,6 +32,6 @@
         <cfset yelpResponse = "Wrong Key">
     </cfif>
 
-	<cfreturn yelpResponse>
+	<cfreturn trim(yelpResponse)>
 </cffunction>
 </cfcomponent>
