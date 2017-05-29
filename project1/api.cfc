@@ -24,7 +24,7 @@
             <cfhttpparam type="url" name="categories" value="#URLEncodedFormat(arguments.categories)#">
             <cfhttpparam type="url" name="radius" value="#URLEncodedFormat(arguments.radius)#">
             <cfhttpparam type="url" name="open_now" value="#URLEncodedFormat(arguments.open_now)#">
-            <cfhttpparam type="url" name="sort_by" value="#URLEncodedFormat(arguments.sort_by)#">
+            <cfhttpparam type="url" name="sort_by" value="#arguments.sort_by#">
             <cfhttpparam type="url" name="limit" value="#URLEncodedFormat(arguments.limit)#">
         </cfhttp>
         <cfset yelpResponse = cfhttp.fileContent>
