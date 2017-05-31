@@ -1,4 +1,5 @@
 <cfcomponent>
+<cfsetting enableCFoutput="true">
 <cffunction name="getRecommendations" access="remote">
     <cfargument name="term" default="" required="true">
     <cfargument name="location" default="" required="true">
