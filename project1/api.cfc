@@ -10,7 +10,6 @@
     <cfargument name="open_now" default="" required="true">
     <cfargument name="sort_by" default="" required="true">
     <cfargument name="limit" default="" required="true">
-
     <cfargument name="key" default="" required="true">
 
     <cfset local.correctKey = "1234567890">
