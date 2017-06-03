@@ -1,7 +1,6 @@
 <cfcomponent>
 <cfsetting enableCFoutputOnly="true">
 <cfprocessingdirective suppressWhiteSpace="true">
-
 <cffunction name="getRecommendations" access="remote">
     <cfargument name="term" default="" required="true">
     <cfargument name="location" default="" required="true">
@@ -13,9 +12,7 @@
     <cfargument name="sort_by" default="" required="true">
     <cfargument name="limit" default="" required="true">
     <cfargument name="key" default="" required="true">
-
     <cfset local.correctKey = "1234567890">
-
     <cfif arguments.key eq local.correctKey>
         <cfhttp url="https://api.yelp.com/v3/businesses/search?" method="get">
             <cfhttpparam type="Header" name="Authorization"  value="Bearer 5u1vBzlUZtkYZgd-AGdYh17UWZiTW69u70bpFgnGUEwwhCLXjJV9qoveHkK6QKyryr81NwG4YtckIsnfA88qa7GZAov95IvyOaJnjvArumbCjlvp2eXr3UOPrP8kWXYx"> 
@@ -33,9 +30,7 @@
     <cfelse>
         <cfset yelpResponse = "Wrong Key">
     </cfif>
-
 	<cfreturn trim(yelpResponse)>
 </cffunction>
 </cfprocessingdirective>
-
 </cfcomponent>
