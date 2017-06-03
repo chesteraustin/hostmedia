@@ -26,7 +26,7 @@
             <cfhttpparam type="url" name="sort_by" value="#arguments.sort_by#">
             <cfhttpparam type="url" name="limit" value="#URLEncodedFormat(arguments.limit)#">
         </cfhttp>
-        <cfset yelpResponse = cfhttp.fileContent>
+        <cfset yelpResponse = trim(cfhttp.fileContent)>
     <cfelse>
         <cfset yelpResponse = "Wrong Key">
     </cfif>
