@@ -1,7 +1,8 @@
 <cfcomponent>
 <cfsetting enableCFoutputOnly="true">
+<cfprocessingdirective suppressWhiteSpace="true">
+
 <cffunction name="getRecommendations" access="remote">
-    <cfprocessingdirective suppressWhiteSpace="true">
     <cfargument name="term" default="" required="true">
     <cfargument name="location" default="" required="true">
     <cfargument name="latitude" default="" required="true">
@@ -34,6 +35,7 @@
     </cfif>
 
 	<cfreturn trim(yelpResponse)>
-    </cfprocessingdirective>
 </cffunction>
+</cfprocessingdirective>
+
 </cfcomponent>
