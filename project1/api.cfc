@@ -38,14 +38,14 @@
     <cfargument name="to" default="" required="true">
     <cfargument name="eventID" default="" required="true">
     <cfargument name="userID" default="" required="true">
-    <cfargument name="name" default="" required="true">
+    <cfargument name="personName" default="" required="true">
     <cfargument name="key" default="" required="true">
     <cfset local.correctKey = "1234567890">
     <cfif arguments.key eq local.correctKey>
 
         <cfmail from="#arguments.from#" to="#arguments.to#" subject="You have been invited!" type="html">
         <cfoutput>
-        <h1>#arguments.name# invited you to a meetup.</h1>
+        <h1>#arguments.personName# invited you to meetup.</h1>
         <a href="https://lavinnakimberly.github.io/Project-1/invite.html?id=#arguments.userID#&eventID=#arguments.eventID#">Click here to view invitation.</a>
         </cfoutput>
         </cfmail>
